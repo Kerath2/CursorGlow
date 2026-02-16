@@ -41,8 +41,8 @@ final class OverlayView: NSView {
         highlightLayer.updateColor(color.cgColor)
     }
 
-    func triggerClickAnimation(color: NSColor) {
-        highlightLayer.animatePress()
+    func triggerClickAnimation(color: NSColor, tiltDirection: CursorHighlightLayer.TiltDirection = .none) {
+        highlightLayer.animatePress(tiltDirection: tiltDirection)
         clickAnimationLayer.animate(color: color)
     }
 }

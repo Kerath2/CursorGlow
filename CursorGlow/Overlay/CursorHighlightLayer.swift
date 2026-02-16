@@ -107,29 +107,63 @@ final class CursorHighlightLayer: CALayer {
         CATransaction.commit()
     }
 
-    func animatePress() {
+    func animatePress(tiltDirection: TiltDirection = .none) {
         removeAllAnimations()
 
-        let scaleDown = CABasicAnimation(keyPath: "transform.scale")
-        scaleDown.fromValue = 1.0
-        scaleDown.toValue = 0.8
-        scaleDown.duration = 0.08
-        scaleDown.timingFunction = CAMediaTimingFunction(name: .easeOut)
+        if tiltDirection != .none {
+            // 3D perspective tilt: rotate around Y axis so one side looks closer
+            let angle: CGFloat = tiltDirection == .left ? -0.70 : 0.70
 
-        let scaleUp = CABasicAnimation(keyPath: "transform.scale")
-        scaleUp.fromValue = 0.8
-        scaleUp.toValue = 1.0
-        scaleUp.beginTime = 0.08
-        scaleUp.duration = 0.15
-        scaleUp.timingFunction = CAMediaTimingFunction(name: .easeOut)
+            var identity = CATransform3DIdentity
+            identity.m34 = -1.0 / 300 // perspective
 
-        let group = CAAnimationGroup()
-        group.animations = [scaleDown, scaleUp]
-        group.duration = 0.23
-        group.fillMode = .forwards
-        group.isRemovedOnCompletion = true
+            let tilted = CATransform3DRotate(identity, angle, 0, 1, 0)
+            let pressed = CATransform3DScale(tilted, 0.85, 0.85, 1)
 
-        add(group, forKey: "press")
+            let tiltIn = CABasicAnimation(keyPath: "transform")
+            tiltIn.fromValue = NSValue(caTransform3D: identity)
+            tiltIn.toValue = NSValue(caTransform3D: pressed)
+            tiltIn.duration = 0.1
+            tiltIn.timingFunction = CAMediaTimingFunction(name: .easeOut)
+
+            let tiltOut = CABasicAnimation(keyPath: "transform")
+            tiltOut.fromValue = NSValue(caTransform3D: pressed)
+            tiltOut.toValue = NSValue(caTransform3D: identity)
+            tiltOut.beginTime = 0.1
+            tiltOut.duration = 0.2
+            tiltOut.timingFunction = CAMediaTimingFunction(name: .easeOut)
+
+            let group = CAAnimationGroup()
+            group.animations = [tiltIn, tiltOut]
+            group.duration = 0.3
+            group.fillMode = .forwards
+            group.isRemovedOnCompletion = true
+            add(group, forKey: "press")
+        } else {
+            let scaleDown = CABasicAnimation(keyPath: "transform.scale")
+            scaleDown.fromValue = 1.0
+            scaleDown.toValue = 0.8
+            scaleDown.duration = 0.08
+            scaleDown.timingFunction = CAMediaTimingFunction(name: .easeOut)
+
+            let scaleUp = CABasicAnimation(keyPath: "transform.scale")
+            scaleUp.fromValue = 0.8
+            scaleUp.toValue = 1.0
+            scaleUp.beginTime = 0.08
+            scaleUp.duration = 0.15
+            scaleUp.timingFunction = CAMediaTimingFunction(name: .easeOut)
+
+            let group = CAAnimationGroup()
+            group.animations = [scaleDown, scaleUp]
+            group.duration = 0.23
+            group.fillMode = .forwards
+            group.isRemovedOnCompletion = true
+            add(group, forKey: "press")
+        }
+    }
+
+    enum TiltDirection {
+        case none, left, right
     }
 
     func updateColor(_ color: CGColor) {

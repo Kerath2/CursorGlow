@@ -91,7 +91,13 @@ final class OverlayWindowManager {
     func triggerClickAnimation(clickType: ClickType) {
         guard settings.isActive, settings.clickAnimationEnabled else { return }
         let color: NSColor = clickType == .left ? settings.leftClickColor : settings.rightClickColor
-        activeWindow?.overlayView?.triggerClickAnimation(color: color)
+        let tilt: CursorHighlightLayer.TiltDirection
+        if settings.tiltOnClickEnabled {
+            tilt = clickType == .left ? .left : .right
+        } else {
+            tilt = .none
+        }
+        activeWindow?.overlayView?.triggerClickAnimation(color: color, tiltDirection: tilt)
     }
 
     func setHighlightVisible(_ visible: Bool, animated: Bool = true) {

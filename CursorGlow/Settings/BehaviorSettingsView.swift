@@ -11,6 +11,7 @@ struct BehaviorSettingsView: View {
 
             Section("Click Animation") {
                 Toggle("Show click animation", isOn: $settings.clickAnimationEnabled)
+                Toggle("Tilt on click", isOn: $settings.tiltOnClickEnabled)
             }
 
             Section("Auto-Hide") {

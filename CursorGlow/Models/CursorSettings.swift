@@ -58,6 +58,9 @@ final class CursorSettings: ObservableObject {
     @Published var rightClickColor: NSColor {
         didSet { UserDefaults.standard.set(rightClickColor.hexString, forKey: "rightClickColor") }
     }
+    @Published var tiltOnClickEnabled: Bool {
+        didSet { UserDefaults.standard.set(tiltOnClickEnabled, forKey: "tiltOnClickEnabled") }
+    }
 
     // Auto-hide
     @Published var autoHideEnabled: Bool {
@@ -100,6 +103,7 @@ final class CursorSettings: ObservableObject {
         static let clickBorderWidth: Double = 3.5
         static let leftClickColor = NSColor(hex: "#FFFF00")!
         static let rightClickColor = NSColor(hex: "#FF073A")!
+        static let tiltOnClickEnabled = true
         static let autoHideEnabled = true
         static let autoHideDelay: Double = 5.0
     }
@@ -119,6 +123,7 @@ final class CursorSettings: ObservableObject {
         clickBorderWidth = Defaults.clickBorderWidth
         leftClickColor = Defaults.leftClickColor
         rightClickColor = Defaults.rightClickColor
+        tiltOnClickEnabled = Defaults.tiltOnClickEnabled
         autoHideEnabled = Defaults.autoHideEnabled
         autoHideDelay = Defaults.autoHideDelay
     }
@@ -141,6 +146,7 @@ final class CursorSettings: ObservableObject {
         self.clickBorderWidth = CGFloat(defaults.object(forKey: "clickBorderWidth") as? Double ?? Defaults.clickBorderWidth)
         self.leftClickColor = NSColor(hex: defaults.string(forKey: "leftClickColor") ?? "") ?? Defaults.leftClickColor
         self.rightClickColor = NSColor(hex: defaults.string(forKey: "rightClickColor") ?? "") ?? Defaults.rightClickColor
+        self.tiltOnClickEnabled = defaults.object(forKey: "tiltOnClickEnabled") as? Bool ?? Defaults.tiltOnClickEnabled
         self.autoHideEnabled = defaults.object(forKey: "autoHideEnabled") as? Bool ?? Defaults.autoHideEnabled
         self.autoHideDelay = defaults.object(forKey: "autoHideDelay") as? TimeInterval ?? Defaults.autoHideDelay
         if #available(macOS 13.0, *) {
