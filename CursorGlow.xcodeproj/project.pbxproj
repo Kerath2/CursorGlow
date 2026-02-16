@@ -1,0 +1,404 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A10001 /* CursorGlowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10001; };
+		A10002 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10002; };
+		A10003 /* CursorSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10003; };
+		A10004 /* HighlightShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10004; };
+		A10005 /* BorderWeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10005; };
+		A10006 /* HighlightSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10006; };
+		A10007 /* OverlayWindowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10007; };
+		A10008 /* OverlayWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10008; };
+		A10009 /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10009; };
+		A10010 /* CursorHighlightLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10010; };
+		A10011 /* ClickAnimationLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10011; };
+		A10012 /* MouseTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10012; };
+		A10013 /* ClickDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10013; };
+		A10014 /* IdleTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10014; };
+		A10018 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10018; };
+		A10019 /* AppearanceSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10019; };
+		A10021 /* BehaviorSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10021; };
+		A10022 /* PreviewCursorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10022; };
+		A10023 /* KeyboardShortcut.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10023; };
+		A10024 /* ScreenObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10024; };
+		A10025 /* PermissionsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10025; };
+		A10026 /* NSColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10026; };
+		A10027 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B10027; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B10001 /* CursorGlowApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CursorGlowApp.swift; sourceTree = "<group>"; };
+		B10002 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B10003 /* CursorSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CursorSettings.swift; sourceTree = "<group>"; };
+		B10004 /* HighlightShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightShape.swift; sourceTree = "<group>"; };
+		B10005 /* BorderWeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderWeight.swift; sourceTree = "<group>"; };
+		B10006 /* HighlightSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightSize.swift; sourceTree = "<group>"; };
+		B10007 /* OverlayWindowManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayWindowManager.swift; sourceTree = "<group>"; };
+		B10008 /* OverlayWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayWindow.swift; sourceTree = "<group>"; };
+		B10009 /* OverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayView.swift; sourceTree = "<group>"; };
+		B10010 /* CursorHighlightLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CursorHighlightLayer.swift; sourceTree = "<group>"; };
+		B10011 /* ClickAnimationLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickAnimationLayer.swift; sourceTree = "<group>"; };
+		B10012 /* MouseTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MouseTracker.swift; sourceTree = "<group>"; };
+		B10013 /* ClickDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickDetector.swift; sourceTree = "<group>"; };
+		B10014 /* IdleTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdleTimer.swift; sourceTree = "<group>"; };
+		B10018 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		B10019 /* AppearanceSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceSettingsView.swift; sourceTree = "<group>"; };
+		B10021 /* BehaviorSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BehaviorSettingsView.swift; sourceTree = "<group>"; };
+		B10022 /* PreviewCursorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewCursorView.swift; sourceTree = "<group>"; };
+		B10023 /* KeyboardShortcut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardShortcut.swift; sourceTree = "<group>"; };
+		B10024 /* ScreenObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenObserver.swift; sourceTree = "<group>"; };
+		B10025 /* PermissionsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionsHelper.swift; sourceTree = "<group>"; };
+		B10026 /* NSColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSColor+Hex.swift"; sourceTree = "<group>"; };
+		B10027 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B10028 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B10029 /* CursorGlow.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CursorGlow.entitlements; sourceTree = "<group>"; };
+		B10030 /* CursorGlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CursorGlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C10001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D10001 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				D10002 /* CursorGlow */,
+				D10012 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D10002 /* CursorGlow */ = {
+			isa = PBXGroup;
+			children = (
+				D10003 /* App */,
+				D10004 /* Models */,
+				D10005 /* Overlay */,
+				D10006 /* Tracking */,
+				D10008 /* Settings */,
+				D10009 /* Utilities */,
+				D10010 /* Extensions */,
+				D10011 /* Resources */,
+			);
+			path = CursorGlow;
+			sourceTree = "<group>";
+		};
+		D10003 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B10001 /* CursorGlowApp.swift */,
+				B10002 /* AppDelegate.swift */,
+				B10028 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		D10004 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B10003 /* CursorSettings.swift */,
+				B10004 /* HighlightShape.swift */,
+				B10005 /* BorderWeight.swift */,
+				B10006 /* HighlightSize.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D10005 /* Overlay */ = {
+			isa = PBXGroup;
+			children = (
+				B10007 /* OverlayWindowManager.swift */,
+				B10008 /* OverlayWindow.swift */,
+				B10009 /* OverlayView.swift */,
+				B10010 /* CursorHighlightLayer.swift */,
+				B10011 /* ClickAnimationLayer.swift */,
+			);
+			path = Overlay;
+			sourceTree = "<group>";
+		};
+		D10006 /* Tracking */ = {
+			isa = PBXGroup;
+			children = (
+				B10012 /* MouseTracker.swift */,
+				B10013 /* ClickDetector.swift */,
+				B10014 /* IdleTimer.swift */,
+			);
+			path = Tracking;
+			sourceTree = "<group>";
+		};
+		D10008 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				B10018 /* SettingsView.swift */,
+				B10019 /* AppearanceSettingsView.swift */,
+				B10021 /* BehaviorSettingsView.swift */,
+				B10022 /* PreviewCursorView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		D10009 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				B10023 /* KeyboardShortcut.swift */,
+				B10024 /* ScreenObserver.swift */,
+				B10025 /* PermissionsHelper.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		D10010 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B10026 /* NSColor+Hex.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D10011 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B10027 /* Assets.xcassets */,
+				B10029 /* CursorGlow.entitlements */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D10012 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B10030 /* CursorGlow.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E10001 /* CursorGlow */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F10003;
+			buildPhases = (
+				E10002 /* Sources */,
+				C10001 /* Frameworks */,
+				E10003 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CursorGlow;
+			productName = CursorGlow;
+			productReference = B10030 /* CursorGlow.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E10004 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					E10001 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+				};
+			};
+			buildConfigurationList = F10001;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D10001;
+			productRefGroup = D10012 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E10001 /* CursorGlow */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E10003 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10027 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E10002 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10001 /* CursorGlowApp.swift in Sources */,
+				A10002 /* AppDelegate.swift in Sources */,
+				A10003 /* CursorSettings.swift in Sources */,
+				A10004 /* HighlightShape.swift in Sources */,
+				A10005 /* BorderWeight.swift in Sources */,
+				A10006 /* HighlightSize.swift in Sources */,
+				A10007 /* OverlayWindowManager.swift in Sources */,
+				A10008 /* OverlayWindow.swift in Sources */,
+				A10009 /* OverlayView.swift in Sources */,
+				A10010 /* CursorHighlightLayer.swift in Sources */,
+				A10011 /* ClickAnimationLayer.swift in Sources */,
+				A10012 /* MouseTracker.swift in Sources */,
+				A10013 /* ClickDetector.swift in Sources */,
+				A10014 /* IdleTimer.swift in Sources */,
+				A10018 /* SettingsView.swift in Sources */,
+				A10019 /* AppearanceSettingsView.swift in Sources */,
+				A10021 /* BehaviorSettingsView.swift in Sources */,
+				A10022 /* PreviewCursorView.swift in Sources */,
+				A10023 /* KeyboardShortcut.swift in Sources */,
+				A10024 /* ScreenObserver.swift in Sources */,
+				A10025 /* PermissionsHelper.swift in Sources */,
+				A10026 /* NSColor+Hex.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		F10004 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F10005 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		F10006 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CursorGlow/Resources/CursorGlow.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = CursorGlow/App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cursorglow.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F10007 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CursorGlow/Resources/CursorGlow.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = CursorGlow/App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cursorglow.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F10001 /* Build configuration list for PBXProject */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F10004 /* Debug */,
+				F10005 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F10003 /* Build configuration list for PBXNativeTarget */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F10006 /* Debug */,
+				F10007 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+	};
+	rootObject = E10004 /* Project object */;
+}
